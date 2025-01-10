@@ -13,4 +13,4 @@
       enabled: yes
   - name: Print nginx installed and started successfully
     ansible.builtin.debug:
-      msg: "NGINX is Installed and Started successfully"
+      msg: "NGINX is Installed, enabled and Started successfully"
