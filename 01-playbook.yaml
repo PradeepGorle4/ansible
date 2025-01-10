@@ -2,5 +2,5 @@
   hosts: web
   tasks: # Task=module=collection, all are same
   - name: Ping the server
-    ansible.biultin.ping:
+    ansible.builtin.ping:
 
