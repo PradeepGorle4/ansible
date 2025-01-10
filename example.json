@@ -1,0 +1,24 @@
+{
+    "name": "Pradeep",
+    "email": "pradeepgorle4@gmail.com",
+    "Address":
+    [
+       {
+            "Type": "Permanent address",
+            "DNO": "65-3-701/1",
+            "Area": "Sriharipuram",
+            "Pincode": "530011"
+       }, 
+
+       {
+            "Type": "Current address",
+            "DNO": "65-3-701/1",
+            "Area": "Sriharipuram",
+            "Pincode": "530011"
+
+
+       }
+
+    ]
+
+}
