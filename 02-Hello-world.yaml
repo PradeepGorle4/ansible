@@ -3,4 +3,4 @@
   tasks:
   - name: print Hello playbook
     ansible.builtin.debug:
-      msg: "HELLO Playbook"
+      msg: "HELLO PLAYBOOK"
