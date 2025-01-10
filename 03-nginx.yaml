@@ -1,12 +1,16 @@
-- name: Install and start nginx
+- name: Install and start Nginx
   hosts: web
-  become: yes # this is = become root. i.e -b
+  become: yes # this is = become root which is = -b
   tasks:
   - name: Install nginx
     ansible.builtin.package:
       name: nginx
       state: present
-  - name: start nginx
+  - name: Start and enable nginx
     ansible.builtin.service:
-      name: nginx
+      name: start the nginx
       state: started
+      enabled: yes
+  - name: Print nginx installed and started successfully
+    ansible.builtin.debug:
+      msg: "NGINX is Installed and Started successfully"
