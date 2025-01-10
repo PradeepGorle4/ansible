@@ -4,4 +4,3 @@
   - name: Ping the server
     ansible.biultin.ping:
 
-
