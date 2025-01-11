@@ -1,8 +1,8 @@
 - name: Variables
   hosts: local
   connection: local
-  vars: # Play level variables or global level variables
-    GREET: "Hello from Play level vars"
+  # vars: # Play level variables or global level variables
+  #   GREET: "Hello from Play level vars"
   # vars_files:
   # - course_vars.yaml
   # vars_prompt:
