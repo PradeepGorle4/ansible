@@ -13,11 +13,11 @@
   vars_prompt:
     name: live
     prompt: course is live...[True/False]
-  tools: # The below is syntax for map or dictionary
-    CI/CD: Jenkins
-    Infrastructure: Terraform
-    containerization: Docker
-    cloud: AWS
+    tools: # The below is syntax for map or dictionary
+      CI/CD: Jenkins
+      Infrastructure: Terraform
+      containerization: Docker
+      cloud: AWS
   tasks:
   - name: Print course information
     ansible.builtin.debug:
