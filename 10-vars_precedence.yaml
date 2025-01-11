@@ -14,4 +14,4 @@
     vars: 
       GREET: "Hello from Task level vars" # Task level vars or local vars
     ansible.builtin.debug:
-      msg: {{ GREET }}
+      msg: "{{ GREET }}"
