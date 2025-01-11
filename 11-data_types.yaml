@@ -10,9 +10,7 @@
     - Shell
     - Ansible
     - AWS
-  vars_prompt:
-    name: live
-    prompt: course is live...[True/False]
+    live: true # Boolean
     tools: # The below is syntax for map or dictionary
       CI/CD: Jenkins
       Infrastructure: Terraform
