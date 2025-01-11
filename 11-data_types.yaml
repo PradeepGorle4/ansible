@@ -12,7 +12,7 @@
     - AWS
   vars_prompt:
     name: live
-    prompt: course is live...[True/False]
+    prompt: is the course live
     tools: # The below is syntax for map or dictionary
       CI/CD: Jenkins
       Infrastructure: Terraform
