@@ -8,7 +8,7 @@
   tasks:
   - name: Variables
     vars: 
-      Course: devops # Task level variables, it takes precedence over everything, like task level variables overrides all other vars.
+      Course: devops # Task level variables or local variables. These task level variable can override all other vars.
       Duration: 120Hrs
       Trainer: "SIVAKUMAR REDDY"
     ansible.builtin.debug:
