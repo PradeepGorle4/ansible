@@ -7,7 +7,7 @@
   - course_vars.yaml
   vars_prompt:
   - name: GREET
-    prompt: Vars from prompt
+    prompt: Hello from Prompt
     private: false
   tasks:
   - name: Variables
