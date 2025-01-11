@@ -1,0 +1,24 @@
+- name: DevOps course information
+  hosts: local
+  connection: local
+  vars:
+    course_name: "DevOps with AWS" # This is string
+    duration: 120Hrs # Number
+    trainer: "Siva Kumar Reddy"
+    topics: # This is syntax for list
+    - Linux
+    - Shell
+    - Ansible
+    - AWS
+  vars_prompt:
+    name: live
+    prompt: course is live...[True/False]
+  tools: # The below is syntax for map or dictionary
+    CI/CD: Jenkins
+    Infrastructure: Terraform
+    containerization: Docker
+    cloud: AWS
+  tasks:
+  - name: Print course information
+    ansible.builtin.debug:
+      msg: "The course is {{ course_name }}, duration is {{ duration }}, trainer is {{ trainer }}. The topics covered are {{ topics }} and tools covered are {{ tools }}"
