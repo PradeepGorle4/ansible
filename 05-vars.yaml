@@ -16,4 +16,4 @@
 
   - name: variables
       ansible.builtin.debug:
-      msg: "I have joined {{ Course }} course with a duration of {{ Duration }} and Trainer is {{ Trainer }}"
+        msg: "I have joined {{ Course }} course with a duration of {{ Duration }} and Trainer is {{ Trainer }}"
