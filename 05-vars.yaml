@@ -1,11 +1,19 @@
 - name: Variables
   hosts: local
   connection: local
-  vars: # Play level variables
+  vars: # Play level variables or global level variables
     Course: DEVOPS
     Duration: 120Hrs
     Trainer: "SIVAKUMAR REDDY"
   tasks:
   - name: Variables
+    vars: 
+      Course: devops # These are task level variables
+      Duration: 120Hrs
+      Trainer: "SIVAKUMAR REDDY"
     ansible.builtin.debug:
+      msg: "I have joined {{ Course }} course with a duration of {{ Duration }} and Trainer is {{ Trainer }}"
+
+  - name: variables
+      ansible.builtin.debug:
       msg: "I have joined {{ Course }} course with a duration of {{ Duration }} and Trainer is {{ Trainer }}"
