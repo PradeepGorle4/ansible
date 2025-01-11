@@ -1,0 +1,16 @@
+- name: variables from files
+  hosts: local
+  connection: local
+  vars_prompt: # Used to prompt the variables from user
+  - name: course
+    prompt: Please enter course name # By default the prompt is confidential, you can set private to false to disable it
+    private: false # This means the information is not confidential
+  - name: duration
+    prompt: Please enter duration
+  - name: trainer
+    prompt: Please enter trainers name
+    private: false
+  tasks:
+  - name: print course information
+    ansible.builtin.debug:
+      msg: "I have joined {{ course }} course with a duration of {{ duration }} and Trainer is {{ trainer }}"
