@@ -11,7 +11,11 @@
     private: false
   tasks:
   - name: Variables
-    vars: 
-      GREET: "Hello from Task level vars" # Task level vars or local vars
-    ansible.builtin.debug:
-      msg: "{{ GREET }}"
+    # vars: 
+    #   GREET: "Hello from Task level vars" # Task level vars or local vars
+    # ansible.builtin.debug:
+    #   msg: "{{ GREET }}"
+
+      # Precedence:
+      # 1. Cmd line or ARGS
+      # 2. Task level vars
