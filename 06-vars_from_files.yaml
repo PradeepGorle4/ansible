@@ -4,6 +4,6 @@
   vars_files: # Used to call variables from vars file.
   - course_vars.yaml
   tasks:
-  - name: variables from files
+  - name: print course information
     ansible.builtin.debug:
-      msg: "I have joined {{ Course }} course with a duration of {{ Duration }} and Trainer is {{ Trainer }}"
+      msg: "I have joined {{ course }} course with a duration of {{ duration }} and Trainer is {{ trainer }}"
