@@ -2,7 +2,7 @@
   hosts: local
   connection: local # Managing its own node, so no need of credentials
   tasks:
-  -name: Hello from Play1
+  - name: Hello from Play1
     ansible.builtin.debug:
       msg: "HELLO FROM PLAY 1"
 
@@ -10,6 +10,6 @@
   hosts: local
   connection: local # Managing its own node, so no need of credentials
   tasks:
-  -name: Hello from Play2
+  - name: Hello from Play2
     ansible.builtin.debug:
       msg: "HELLO FROM PLAY 2"
