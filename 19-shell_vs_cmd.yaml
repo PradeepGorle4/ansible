@@ -10,3 +10,9 @@
 
   - name: execute ls cmd using command module
     ansible.builtin.shell: ls -ltr # This will work as the it is just running the ls -ltr cmd
+
+  - name: execute ls cmd using command module
+    ansible.builtin.shell: ls -ltr
+    register: prev_cmd_result # Register stores the output to the variable - prev_cmd_result. you can give any variable name.
+    ansible.builtin.debug:
+      msg: "{{ prev_cmd_result }}"
