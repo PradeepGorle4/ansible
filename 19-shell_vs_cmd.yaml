@@ -2,5 +2,9 @@
   hosts: local
   connection: local
   tasks:
-  - name: execute ls cmd and store the output
-    ansible.builtin.shell: ls -ltr > /tmp/output.txt
+  - name: execute ls cmd and store the output using shell module
+    ansible.builtin.shell: ls -ltr > /tmp/output.txt  # shell modules logs into the server and can use all scripting methods.
+  
+  - name: execute ls cmd and store output using command module
+    ansible.builtin.command: ls -ltr > /tmp/output.txt
+
