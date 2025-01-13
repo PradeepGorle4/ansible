@@ -35,3 +35,9 @@
       name: "Pradeep Gorle"
     ansible.builtin.debug:
       msg: "My name is {{ name | lower }}"
+
+  - name: convert upper to lower
+    vars:
+      name: "Pradeep Gorle"
+    ansible.builtin.debug:
+      msg: "My name in upper case is {{ name| upper }}"
