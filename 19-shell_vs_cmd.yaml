@@ -5,6 +5,8 @@
   - name: execute ls cmd and store the output using shell module
     ansible.builtin.shell: ls -ltr > /tmp/output.txt  # shell modules logs into the server and can use all scripting methods.
   
-  - name: execute ls cmd and store output using command module
-    ansible.builtin.command: ls -ltr > /tmp/output.txt # This wont work as cmd module cannot login to server and so cant use redirectors.
+  # - name: execute ls cmd and store output using command module
+  #   ansible.builtin.command: ls -ltr > /tmp/output.txt # This wont work as cmd module cannot login to server and so cant use redirectors.
 
+  - name: execute ls cmd using command module
+    ansible.builtin.shell: ls -ltr # This will work as the it is just running the ls -ltr cmd
