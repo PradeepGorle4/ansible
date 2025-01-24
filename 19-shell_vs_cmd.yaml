@@ -13,7 +13,7 @@
 
   - name: execute ls cmd using command module
     ansible.builtin.shell: ls -ltr
-    register: prev_cmd_result # Register stores the output to the variable - prev_cmd_result. you can give any variable name.
+    register: prev_cmd_result # Register keyword stores the output to the variable - prev_cmd_result. you can give any variable name.
 
   - name: print the result
     ansible.builtin.debug:
