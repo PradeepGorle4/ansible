@@ -47,7 +47,7 @@
       record: "{{ item.item }}.{{ zone }}"
       type: A
       ttl: 1
-      value: "{{ item.instance[0].private_ip_address }}"
+      value: "{{ item.instances[0].private_ip_address }}"
       wait: true # This will help waiting till changes are replicated
       overwrite: true # This will override if it the record is already present
     loop: "{{ ec2_info.results }}"
