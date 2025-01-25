@@ -9,8 +9,7 @@
     instances:
     - mysql
     - backend
-    - frontend
-    
+    - frontend  
   tasks:
   - name: Install AWS Python libraries
     ansible.builtin.pip:
@@ -19,7 +18,6 @@
     loop:
     - boto3
     - botocore
-
   - name: Creating servers
     amazon.aws.ec2_instance:
       name: "{{ item }}"
@@ -28,4 +26,10 @@
       image_id: "{{ image_id }}"
       security_group: "{{ sg_id }}"
     loop: "{{ instances }}"
+    register: ec2_info
+  - name: print ec2_info
+    ansible.builtin.debug:
+      name: print all the ec2 information
+      msg: "EC2 INFO is {{ ec2_info }}"
+
 
