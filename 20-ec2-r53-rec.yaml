@@ -51,3 +51,16 @@
       wait: true # This will help waiting till changes are replicated
       overwrite: true # This will override if it the record is already present
     loop: "{{ ec2_info.results }}"
+
+  - name: create record for frontend public Ip
+    amazon.aws.route53:
+      state: present
+      zone: "{{ zone }}"
+      record: "{{ zone }}"
+      type: A
+      ttl: 1
+      value: "{{ item.instances[0].public_ip_address }}"
+      wait: true # This will help waiting till changes are replicated
+      overwrite: true # This will override if it the record is already present
+    loop: "{{ ec2_info.results }}" 
+    when: item.item == "frontend"
