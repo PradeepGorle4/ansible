@@ -40,7 +40,7 @@
       msg: "{{ item.item }}: {{ item.instances[0].private_ip_address }}"
     loop: "{{ ec2_info.results }}"
 
-  - name: Adding A Records in R53 for the servers
+  - name: create private IP's in R53
     amazon.aws.route53:
       state: present
       zone: "{{ zone }}"
@@ -49,5 +49,5 @@
       ttl: 1
       value: "{{ item.instance[0].private_ip_address }}"
       wait: true # This will help waiting till changes are replicated
-      override: true # This will override if it the record is already present
+      overwrite: true # This will override if it the record is already present
     loop: "{{ ec2_info.results }}"
