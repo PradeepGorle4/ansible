@@ -1,0 +1,13 @@
+plugin: amazon.aws.aws_ec2
+regions:
+- us-east-1
+include_filters: # This includes everything in the inventory that has the following tags.
+- tag:Name: nginx
+  instance-state-name : running
+
+hostnames: # this fetches the information based on what you give, here fetches the private Ip address which match the filters.
+# You can also specify a list in order of precedence for hostname variables.
+  - private-ip-address
+compose:
+  # This sets the ansible_host variable to connect with the private IP address without changing the hostname.
+  ansible_host: private_ip_address
