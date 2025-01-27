@@ -2,7 +2,7 @@ plugin: amazon.aws.aws_ec2
 regions:
 - us-east-1
 include_filters: # This includes everything in the inventory that has the following tags.
-- tag:Name: nginx
+- tag:name: nginx
   instance-state-name : running
 
 hostnames: # this fetches the information based on what you give, here fetches the private Ip address which match the filters.
